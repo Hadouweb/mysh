@@ -94,6 +94,19 @@ void tok_destroy(tok_t* tok) {
 	}
 }
 
+/*
+ *	struct tok {
+ *		char* 	data;
+ *		int 	type;
+ *		tok_t* 	next;
+ *	};
+ *
+ * 	struct lexer
+ *	{
+ *		tok_t* 	llisttok;
+ *		int 	ntoks;
+ *	};
+ */
 int lexer_build(char* input, int size, lexer_t* lexerbuf)
 {
 	if (lexerbuf == NULL)
@@ -252,7 +265,7 @@ int lexer_build(char* input, int size, lexer_t* lexerbuf)
 		
 		token = token->next;
 	}
-	
+
 	lexerbuf->ntoks = k;
 	return k;
 }

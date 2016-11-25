@@ -1,6 +1,8 @@
 #ifndef LEXER_H
 #define LEXER_H
 
+#include <stdio.h>
+
 enum TokenType{
 	CHAR_GENERAL = -1,
 	CHAR_PIPE = '|',

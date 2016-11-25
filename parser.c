@@ -415,6 +415,16 @@ ASTreeNode* TOKENLIST2()
     return NULL;
 }
 
+/*
+ *	typedef struct ASTreeNode
+ *	{
+ *		int type;
+ *		char* szData;
+ *		struct ASTreeNode* left;
+ *		struct ASTreeNode* right;
+ *
+ *	} ASTreeNode;
+ */
 int parse(lexer_t* lexbuf, ASTreeNode** syntax_tree)
 {
 	if (lexbuf->ntoks == 0)
